@@ -1,8 +1,17 @@
-import Mother from "./components/Test/test";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Test/Home";
 
-function App() {
-  return <Mother></Mother>;
-}
+const App = () => {
+  return (
+    <div>
+      <Router>
+        <Route path="/">
+          <Home></Home>
+        </Route>
+      </Router>
+    </div>
+  );
+};
 
 export default App;
