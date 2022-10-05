@@ -16,7 +16,9 @@ function Mother() {
   // 첫번째 렌더에 실행하고, keyword가 바뀌면 실행
   // keyword는 input value
   useEffect(() => {
-    console.log("SEARCH FOR", keyword);
+    if (keyword !== "" && keyword.length > 6) {
+      console.log("SEARCH FOR", keyword);
+    }
     //대괄호 부분은 지켜보고 있는 부분임.
   }, [keyword]);
 
