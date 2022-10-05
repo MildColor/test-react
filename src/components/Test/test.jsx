@@ -10,17 +10,19 @@ function Mother() {
 
   // 첫번째 렌더에만 실행
   useEffect(() => {
-    console.log("Call the API...");
+    console.log("I run only once");
   }, []);
 
   // 첫번째 렌더에 실행하고, keyword가 바뀌면 실행
   // keyword는 input value
   useEffect(() => {
-    if (keyword !== "" && keyword.length > 6) {
-      console.log("SEARCH FOR", keyword);
-    }
+    console.log("I run when 'keyword' changes");
     //대괄호 부분은 지켜보고 있는 부분임.
   }, [keyword]);
+
+  useEffect(() => {
+    console.log("I run when 'counter' changes");
+  }, [counter]);
 
   return (
     <div>
